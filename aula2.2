@@ -1,0 +1,12 @@
+var x1;
+var x2;
+
+maximize z:     5 * x1 + 3 * x2;
+
+subject to c11: 2 * x1 + 3 * x2 <= 18;
+subject to c12:     x1          <=  6;
+subject to c13:              x2 <=  4;
+subject to c14:     x1          >=  0;
+subject to c15:              x2 >=  0;
+
+end;

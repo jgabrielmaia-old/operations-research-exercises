@@ -1,0 +1,10 @@
+var m >= 0;
+var l >= 0;
+
+maximize z:     m + l;
+
+subject to c11: 120*m  +    80*l <= 480;
+subject to c12:   3*m  +     3*l <= 18;
+subject to c13: 5000*m + 10000*l <=  40000;
+
+end;
