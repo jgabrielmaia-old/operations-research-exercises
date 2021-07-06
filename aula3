@@ -1,0 +1,54 @@
+# O que fazer quando as quantidades são inteiras
+# arredondar os resultados
+# programação linear inteira
+
+# O que fazer quando as quantidades são negativas
+# Substituir uma variavel xi por -xi
+
+# O que fazer quando as quantidades podem ser negativas ou positivas?
+# Substituir a variável livre por um par de variáveis não-negativas
+# onde se escreva x leia-se x1-x2, onde x é livre e x1-x2 não-negativas
+
+# função objetivo: função linear - combinação linear de variáveis
+# c1x1 + c2x2 + c3x3 + ... + cnxn
+# linear: expoentes são todos 1
+
+# restricoes: combinacao linear das variaveis >=, <= ou = termo independente no modelo
+# c1x1 + c2x2 + c3x3 + ... + cnxn = b
+# No algoritmo simplex somente usamos variáveis de igualdade (equações)
+
+# Para converter restrições de desigualdade em igualdade, usamos a variável de folga
+# c1x1 + c2x2 + c3x3 + ... + cnxn <= b é equivalente a
+# c1x1 + c2x2 + c3x3 + ... + cnxn + s = b
+# c1x1 + c2x2 + c3x3 + ... + cnxn >= b é equivalente a
+# c1x1 + c2x2 + c3x3 + ... + cnxn - s = b
+
+var x1 >= 0;
+var x2 >= 0;
+var x3 >= 0;
+var x4 >= 0;
+
+minimize z:     x1 + 0.25 * x2 + 4 * x3 + 1.5 * x4;
+
+subject to c11: 1000 * x1 + 300 * x2 + 2400 * x3 + 800 * x4 - s1              = 700;
+subject to c12:                   x2                             - s2         = 0.25;
+subject to c13:                               x3                        - s3  = 0.15;
+subject to c14:        x1  +      x2 +        x3  +      x4  = 1;
+
+end;
+
+# tabuas
+var x1 >= 0;
+var x2 >= 0;
+var x3 >= 0;
+var x4 >= 0;
+var x5 >= 0;
+var x6 >= 0;
+var x7 >= 0;
+var x8 >= 0;
+var x9 >= 0;
+
+minimize z:      x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9;
+
+end;
+
