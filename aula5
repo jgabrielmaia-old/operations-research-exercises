@@ -1,0 +1,10 @@
+var x1 >= 0;
+var x2 >= 0;
+
+minimize z: x + y;
+
+subject to c11: 3 * x1 + 2 * x2 <= 1;
+subject to c12: 1 * x1 + 1 * x2 <= 0.25;
+subject to c13: 1 * x1 + 2 * x2 <= 8;
+
+end;

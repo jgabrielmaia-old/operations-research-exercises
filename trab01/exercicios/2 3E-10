@@ -1,0 +1,22 @@
+var WA  >= 0;   # Toneladas da Liga A, maior ou igual a zero
+var WB  >= 0;   # Toneladas da Liga B, maior ou igual a zero
+var X1A >= 0;   # Quantidade do componente I na Liga A, maior ou igual a zero
+var X1B >= 0;   # Quantidade do componente I na Liga B, maior ou igual a zero
+var X2A >= 0;   # Quantidade do componente II na Liga A, maior ou igual a zero
+var X2B >= 0;   # Quantidade do componente II na Liga B, maior ou igual a zero
+var X3A >= 0;   # Quantidade do componente III na Liga A, maior ou igual a zero
+var X3B >= 0;   # Quantidade do componente III na Liga B, maior ou igual a zero
+
+maximize z: 200 * WA + 300 * WB - 30 * X1A + 30* X1B - 40 * X2A + 40 * X2B - 50 * X3A + 50 * X3B;
+
+subject to c11: 0.2  * X1A + 0.1 * X2A + 0.05 * X3A <= 0.8 * WA;
+subject to c12: 0.1  * X1A + 0.2 * X2A + 0.05 * X3A <= 0.3 * WA;
+subject to c13: 0.3  * X1A + 0.3 * X2A + 0.2  * X3A >= 0.5 * WA;
+subject to c14: 0.1  * X1B + 0.2 * X2B + 0.05 * X3B >= 0.4 * WB;
+subject to c15: 0.1  * X1B + 0.2 * X2B + 0.05 * X3B <= 0.6 * WB;
+subject to c16: 0.3  * X1A + 0.3 * X2A + 0.7  * X3A >= 0.3 * WB;
+subject to c17: 0.38 * X1B + 0.3 * X2B + 0.2  * X3B <= 0.7 * WB;
+subject to c18:        X1A +       X1B              <= 10000;
+subject to c19:        X2A +       X2B              <= 2000;
+subject to c20:        X3A +       X3B              <= 3000;
+end;
